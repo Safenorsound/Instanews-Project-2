@@ -1,0 +1,75 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+// only import statements should be in here. 
+
+body {
+    background: black;
+    color: white;
+}
+footer{
+    color: white;
+}
+
+/* CSS example adapted from code-pen example:
+https://codepen.io/redacademy/pen/JNbrxQ */
+
+/* When we use SASS, adapt from Julia's class example: https://codepen.io/juliabrowne/pen/NBRbWK */
+
+* { 
+	box-sizing: border-box; 
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none; 
+}
+
+.menu-link {
+  color: #ed4343;
+  float: right;
+  display: block;
+  padding: 1em;
+}
+
+nav {
+  background-color: #f4f4f4;
+  clear: both;
+  transition: all 0.3s ease-out;
+}
+
+.js nav {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.section-articles {
+  color: white;
+}
+nav.active {
+  max-height: 15em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+
+nav li {
+  border-bottom: 1px solid #808080; 
+}
+
+nav li a {
+  color: #ed4343;
+  display: block;
+  padding: 0.8em;
+}
+
+nav li:last-child {
+  border-bottom: 0;
+}
