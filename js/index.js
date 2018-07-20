@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   $.("#top-stories").on("change", function()
     {var n=a)(this).val();
+      n.length&
     // console.log($("#top-stories").val());
     var selectedStory = $("#top-stories").val();
     $(".top-stories").empty();
@@ -15,21 +16,19 @@ $(document).ready(function() {
       $.param({
         "api-key": "09f87bcede464e198631c56d291230bf,"l.empty(),
 
-        e=“",
-        i=“",
-        a(".logo img”)
-        .css({height:"50%”,
-        width:"50%"}),
+        e="",
+        i="",
+        a(".logo img")
+        .css(
+          {height:"50%”,width:"50%"}),
         a(".site-header”).
-        css({"align-items”:
-        "flex-start”,
-        flex:"1 0 auto”,
-        height:"auto”,
-        "max-width”:"600px"}),
-        a(".search-placeholder”)
-        .hide(),s.css("display","block”),
+        css({"align-items":"flex-start”,
+        flex:1 0 "auto",
+        height:"auto,max-width":"600px"}),
+        a(".search-placeholder")
+        .hide(),s.css("display","block"),
 
-      });
+      )};
 
     // Ajax request_
     $.ajax({
@@ -70,8 +69,7 @@ $(document).ready(function() {
       })
       .fail(function(err) {
         throw err;
-        {l.append('<p class="feedback”> 
-        Sorry! There was a problem, please try again.</p>')})
+        {l.append('<p class="feedback”> Sorry! There was a problem, please try again.</p>')})
         .always(function(){s.hide()}))})}(jQuery);
       })
       .always(function(data) {
