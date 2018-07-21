@@ -1,86 +1,53 @@
 $(document).ready(function() {
-// URL for our API request from NYT
-// Try appending the loading gift.
+  $("#top-stories").on("change", function() {
+    // console.log("things changed");
 
-  $.("#top-stories").on("change", function()
-    {var n=a)(this).val();
-      n.length&
-    // console.log($("#top-stories").val());
-    var selectedStory = $("#top-stories").val();
-    $(".top-stories").empty();
+    // try adding the loading gif
+    
+    // selected value from #top-stories
+    var selectedStory = $(this).val();
 
+    // create url for api call
     var url =
       "https://api.nytimes.com/svc/topstories/v2/" + selectedStory + ".json";
-    url +=
-      "?" +
-      $.param({
-        "api-key": "09f87bcede464e198631c56d291230bf,"l.empty(),
+    url += "?" + $.param({ "api-key": "09f87bcede464e198631c56d291230bf" });
 
-        e="",
-        i="",
-        a(".logo img")
-        .css(
-          {height:"50%”,width:"50%"}),
-        a(".site-header”).
-        css({"align-items":"flex-start”,
-        flex:1 0 "auto",
-        height:"auto,max-width":"600px"}),
-        a(".search-placeholder")
-        .hide(),s.css("display","block"),
-
-      )};
-
-    // Ajax request_
+    // ajax get request
     $.ajax({
       url: url,
-      method: "GET",
-      url:t,dataType:"json"})
-      .done(function(data) {e=t.results;
+      method: "GET"
+    })
+      .done(function(data) {
+        // console.log(data.results);
 
-        $.each(data.results, function(key, value){
-          $(".section-articles")
-          .append("<div class = 'article'>" 
-          + "<a href=" + value.url + "></a>" 
-          + '<img scr=' + value.multimedia.[4].url + ">" 
-          + "<p>" + value.abstract + "</p>" + "</div>");
+        var filteredArray = data.results.slice(0, 12);
+        // console.log(filteredArray);
+
+        // var i;
+        // for (i = 0; i < filteredArray.length; i++) {
+        // console.log('length:' + i )
+        // var abstract = filteredArray[i].abstract
+        // var storyUrl = filteredArray[i].url
+        // console.log(storyUrl)
+        // console.log(abstract)
+        // }
+
+        $.each(filteredArray, function(index, value) {
+          console.log(value);
+          var imageUrl = value.multimedia[4].url;
+          var storyUrl = value.url; // try adding this url e.g. storyUrl to your html template below as a link e.g. <a href=" etc...
+          var abstract = value.abstract;
+          var output = "<div class='nyt-article' style='background-image:url(" + imageUrl + ");'>";
+          output += "<p>" + abstract + "</p>";
+          output += "</div>";
+          $(".section-articles").append(output);
         });
-
-
-          // var
-          //    urlLink = value.url,
-          //    images = value.multimedia[4].url,
-          //    abstract = value.abstract,
-          //    html = <div class = "container">;
-
-          // html += urlLink;
-          // html += images;
-          // html += abstract;
-
-
-        
-          // var html = “<div class=‘new-cell’>“;
-          // html += “<a href=‘url’>” + “<p>” + value.abstract + “</p>” + “</a>“;
-          // html += “</div>“;
-
-        // Try using $.each to loop throught the data, eg. resultsArray
-        // and check out the array in the data called results & try appending the output to your html_
-
-        // var resultsArray = data.results;
       })
-      .fail(function(err) {
-        throw err;
-        {l.append('<p class="feedback”> Sorry! There was a problem, please try again.</p>')})
-        .always(function(){s.hide()}))})}(jQuery);
+      .fail(function(error) {
+        console.log("error sorry");
       })
-      .always(function(data) {
-        // data just represents the retunrned object from NYT api
-        console.log(data.results);
-        
-      
-
-})
-    }) // end of Ajax 
-  })  // end of event
-}) // end of document.ready
-
-// Align items on the selector for the spacing. 
+      .always(function() {
+          // try removing loading gif
+      });
+  });
+});

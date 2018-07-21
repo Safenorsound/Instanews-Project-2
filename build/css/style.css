@@ -1,2 +1,70 @@
-@import 'partials/variables';
-@import 'partials/mixins';
+body {
+  background: black; }
+
+footer {
+  color: #c2c2c2;
+  font-size: .9rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem; }
+
+body {
+  background: black;
+  color: white; }
+
+footer {
+  color: white; }
+
+/* CSS example adapted from code-pen example:
+https://codepen.io/redacademy/pen/JNbrxQ */
+/* When we use SASS, adapt from Julia's class example: https://codepen.io/juliabrowne/pen/NBRbWK */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.menu-link {
+  color: #ed4343;
+  float: right;
+  display: block;
+  padding: 1em; }
+
+nav {
+  background-color: #f4f4f4;
+  clear: both;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.js nav {
+  overflow: hidden;
+  max-height: 0; }
+
+.section-articles {
+  color: white; }
+
+nav.active {
+  max-height: 15em; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #808080; }
+
+nav li {
+  border-bottom: 1px solid #808080; }
+
+nav li a {
+  color: #ed4343;
+  display: block;
+  padding: 0.8em; }
+
+nav li:last-child {
+  border-bottom: 0; }
+
+.nyt-article {
+  padding: 1rem; }

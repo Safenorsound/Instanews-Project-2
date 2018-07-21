@@ -9,6 +9,8 @@ ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
 
+backup/
+
 # Ignore packages #
 # =============== #
 *.7z
