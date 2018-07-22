@@ -12,7 +12,7 @@ $(document).ready(function() {
       "https://api.nytimes.com/svc/topstories/v2/" + selectedStory + ".json";
     url += "?" + $.param({ "api-key": "09f87bcede464e198631c56d291230bf" });
 
-    // ajax get request
+    // ajax get request from user selection
     $.ajax({
       url: url,
       method: "GET"
@@ -28,9 +28,10 @@ $(document).ready(function() {
           var imageUrl = value.multimedia[4].url;
           var storyUrl = value.url; // try adding this url e.g. storyUrl to your html template below as a link e.g. <a href=" etc...
           var abstract = value.abstract;
-          var output = "<div class='nyt-article' style='background-image:url(" + imageUrl + ");'>";
+          var output = "<a href='" + "<div class='nyt-article' style='background:url(" + imageUrl + ");'>";
           output += "<p>" + abstract + "</p>";
           output += "</div>";
+          output += "</a>";
           $(".section-articles").append(output);
         });
       })
@@ -39,6 +40,8 @@ $(document).ready(function() {
       })
       .always(function() {
           // try removing loading gif
-      });
-  });
-});
+      }); // Emd of "Always" function
+
+  }); // End of top-stories function. 
+
+ });  // End of document-ready Jquery function.
