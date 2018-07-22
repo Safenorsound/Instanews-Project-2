@@ -3,7 +3,7 @@ $(document).ready(function() {
     // console.log("things changed");
 
     // try adding the loading gif
-    
+
     // selected value from #top-stories
     var selectedStory = $(this).val();
 
@@ -22,15 +22,6 @@ $(document).ready(function() {
 
         var filteredArray = data.results.slice(0, 12);
         // console.log(filteredArray);
-
-        // var i;
-        // for (i = 0; i < filteredArray.length; i++) {
-        // console.log('length:' + i )
-        // var abstract = filteredArray[i].abstract
-        // var storyUrl = filteredArray[i].url
-        // console.log(storyUrl)
-        // console.log(abstract)
-        // }
 
         $.each(filteredArray, function(index, value) {
           console.log(value);
