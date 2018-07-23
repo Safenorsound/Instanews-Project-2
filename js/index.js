@@ -18,31 +18,23 @@ $(document).ready(function() {
       method: "GET"
     })
       .done(function(data) {
-        // console.log(data.results);
 
         var filteredArray = data.results.slice(0, 12);
-        // console.log(filteredArray);
 
         $.each(filteredArray, function(index, value) {
           //   console.log(value);
           var imageUrl = value.multimedia[4].url;
-          var storyUrl = value.url; // try adding this url e.g. storyUrl to your html template below as a link e.g. <a href=" etc...
+          var storyUrl = value.url;
           var abstract = value.abstract;
-          var output = "<div class='entire-link'>";
-          output += "<a target='_blank' href='" + storyUrl + ">";
+          var output = "<div class='entire-link' style='background: url(" +
+          imageUrl +
+          "); background-size: cover; background-position:center;'>";
+          output += "<a target='_blank' href='" + storyUrl + "'>";
 
-          output +=
-            "<div class='nyt-article' style='background: url(" +
-            imageUrl +
-            ");'>";
-            output += "</div>";
           output += "<div class='text-section'>";
           output += "<p>" + abstract + "</p>";
           output += "</div>";
           output += "</a>";
-          
-         
-
           output += "</div>";
           $(".section-articles").append(output);
         });
