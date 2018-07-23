@@ -5,7 +5,8 @@ This is my second marked submission in the RED Academy Web Development Program. 
 
 This project introduced several programs and skills including:
 
-API's JSON
-Gulp
-SASS and SCSS
-Intro to Animation.
+API's JSON <br>
+Gulp<br>
+SASS and SCSS<br>
+Intro to Animation<br>
+Importing Partials for styling and Effects

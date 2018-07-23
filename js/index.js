@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#top-stories").on("change", function() {
     // console.log("things changed");
-
+    $(".section-articles").empty();
     // try adding the loading gif
 
     // selected value from #top-stories
@@ -24,24 +24,35 @@ $(document).ready(function() {
         // console.log(filteredArray);
 
         $.each(filteredArray, function(index, value) {
-          console.log(value);
+          //   console.log(value);
           var imageUrl = value.multimedia[4].url;
           var storyUrl = value.url; // try adding this url e.g. storyUrl to your html template below as a link e.g. <a href=" etc...
           var abstract = value.abstract;
-          var output = "<a href='" + "<div class='nyt-article' style='background:url(" + imageUrl + ");'>";
+          var output = "<div class='entire-link'>";
+          output += "<a target='_blank' href='" + storyUrl + ">";
+
+          output +=
+            "<div class='nyt-article' style='background: url(" +
+            imageUrl +
+            ");'>";
+            output += "</div>";
+          output += "<div class='text-section'>";
           output += "<p>" + abstract + "</p>";
           output += "</div>";
           output += "</a>";
+          
+         
+
+          output += "</div>";
           $(".section-articles").append(output);
         });
       })
       .fail(function(error) {
+        // $(".section-articles").append(output)
         console.log("error sorry");
       })
       .always(function() {
-          // try removing loading gif
-      }); // Emd of "Always" function
-
-  }); // End of top-stories function. 
-
- });  // End of document-ready Jquery function.
+        // try removing loading gif
+      }); // End of "Always" function
+  }); // End of top-stories function.
+}); // End of document-ready Jquery function.
