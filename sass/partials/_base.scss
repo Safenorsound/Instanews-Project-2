@@ -56,6 +56,36 @@ search-form {
   width: 300px;
 }
 
+// * Fonts
+
+@font-face{
+	font-family:OpenSans;
+	src:url(../assets/fonts/OpenSans-Bold.ttf);
+	font-weight:bold;
+	font-style:normal;
+}
+@font-face{
+	font-family:OpenSans;
+	src:url(../assets/fonts/OpenSans-BoldItalic.ttf);
+	font-weight:bold;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:OpenSans;
+    src:url(../assets/fonts/OpenSans-Light.ttf);
+    font-weight:300;
+	font-style:regular;
+}
+
+@font-face{
+	font-family:OpenSans;
+	src:url(../assests/fonts/OpenSans-LightItalic.ttf);
+	font-weight:300;
+	font-style: italic;
+}
+
+
 footer {
   color: white;
   margin-top: 200px;
