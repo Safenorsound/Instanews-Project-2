@@ -26,10 +26,12 @@ $(document).ready(function() {
           var imageUrl = value.multimedia[4].url;
           var storyUrl = value.url;
           var abstract = value.abstract;
-          var output = "<div class='entire-link' style='background: url(" +
-          imageUrl +
-          "); background-size: cover; background-position:center;'>";
-          output += "<a target='_blank' href='" + storyUrl + "'>";
+
+          var output = "<div class='entire-link' style='background: url(" + imageUrl + "); background-size:cover; background-position:center;'>" + "<a target='_blank' href='" + storyUrl + "'>";
+
+// Image not clickable yet. Maybe an issue with the placement of the <a href>
+
+        //   output += "<a target='_blank' href='" + storyUrl + ">";
 
           output += "<div class='text-section'>";
           output += "<p>" + abstract + "</p>";
