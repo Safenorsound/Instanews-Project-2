@@ -29,9 +29,7 @@ $(document).ready(function() {
 
           var output = "<div class='entire-link' style='background: url(" + imageUrl + "); background-size:cover; background-position:center;'>" + "<a target='_blank' href='" + storyUrl + "'>";
 
-// Image not clickable yet. Maybe an issue with the placement of the <a href>
-
-        //   output += "<a target='_blank' href='" + storyUrl + ">";
+// Image not clickable yet. Maybe an issue with the placement of the <a href> I wasn't able to make the entire article clickable in an href without the code breaking. -JR
 
           output += "<div class='text-section'>";
           output += "<p>" + abstract + "</p>";
