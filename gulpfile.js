@@ -10,20 +10,24 @@ var gulp = require('gulp'),
         cssnano = require("gulp-cssnano"),
         prettyError = require("gulp-prettyError");
 
-    gulp.task("sass", function() {
+        // babel task
+        gulp.task("babel", () => (
         return gulp
-          .src("./sass/style.scss")
-          .pipe(sass())
-          .pipe(
-            autoprefixer({
-              browsers: ["last 2 versions"]
-                })
-              )
-              .pipe(gulp.dest("./build/css"))
-              .pipe(cssnano())
-              .pipe(rename("style.min.css"))
-              .pipe(gulp.dest("./build/css"));
-          });
+        .src('./js/index.js')
+        .pipe(babel())
+        .pipe(gulp.dest('./build/js/'));
+        
+        gulp.task(
+            'scripts',
+            gulp.series('lint', function() {
+              return gulp
+                .src('./js/*.js')
+                .pipe(babel())
+                .pipe(uglify())
+                .pipe(rename({extname: '.min.js'}))
+                .pipe(gulp.dest('./build/js'));
+            })
+          );
 
         // Linting Task
 

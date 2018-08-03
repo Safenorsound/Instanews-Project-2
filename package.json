@@ -9,8 +9,11 @@
   "author": "Joe Roback",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.24.5",
     "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-prettyerror": "^1.2.1",
     "gulp-rename": "^1.3.0",
     "gulp-uglify": "^3.0.0"
