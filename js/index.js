@@ -3,6 +3,7 @@ $(document).ready(function() {
     // console.log("things changed");
     $(".section-articles").empty();
     // try adding the loading gif
+    $('.section-articles').append('<div id="spinner"></div>');
 
     // selected value from #top-stories
     var selectedStory = $(this).val();
@@ -44,7 +45,9 @@ $(document).ready(function() {
         console.log("error sorry");
       })
       .always(function() {
-        // try removing loading gif
+        // To remove the loading gif
+        $('#spinner').detach();
+       
       }); // End of "Always" function
   }); // End of top-stories function.
 }); // End of document-ready Jquery function.

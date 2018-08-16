@@ -11,11 +11,12 @@ var gulp = require('gulp'),
         prettyError = require("gulp-prettyError");
 
         // babel task
-        gulp.task("babel", () => (
+        gulp.task("babel", function() {
         return gulp
         .src('./js/index.js')
         .pipe(babel())
-        .pipe(gulp.dest('./build/js/'));
+        .pipe(gulp.dest('./build/js/'))
+        });
         
         gulp.task(
             'scripts',
