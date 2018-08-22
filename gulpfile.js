@@ -77,16 +77,3 @@ gulp.task('browser-sync', function() {
         //Default task will be to browser-sync and watch
         gulp.task("default", gulp.parallel("browser-sync", "watch")
     );
-
-
-    // Nav Menu Javascript adpapted from class- code-pen example: $(function() {
-//   $('body').addClass('js');
-//   var $menu = $('#menu'),
-//       $menulink = $('.menu-link');
-  
-//   $menulink.click(function() {
-//     $menulink.toggleClass('active');
-//     $menu.toggleClass('active');
-//     return false;
-//   });
-// });

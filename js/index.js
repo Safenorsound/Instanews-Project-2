@@ -40,9 +40,8 @@ $(document).ready(function() {
           $(".section-articles").append(output);
         });
       })
-      .fail(function(error) {
-        // $(".section-articles").append(output)
-        console.log("error sorry");
+      .fail(function(err) {
+        throw err;
       })
       .always(function() {
         // To remove the loading gif
