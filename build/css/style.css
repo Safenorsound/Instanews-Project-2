@@ -1,3 +1,170 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a.entire-link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 300px; }
+
+.logo {
+  height: 50%;
+  max-width: 50%; }
+
+.screen-reader {
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  height: 1px; }
+
+body {
+  background: black;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'OpenSans', 'sans-serif';
+  line-height: 1;
+  height: 100vh; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  height: 85%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+@media screen and (min-width: 600px) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 40px; }
+
+@media screen and (min-width: 1000px) {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 0px; }
+
+img.ajax-loader {
+  width: 50px;
+  height: 50px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+logo {
+  height: auto;
+  width: 150px; }
+
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  background-color: #f8f8f8; }
+
+p {
+  line-height: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-decoration: none; }
+
+div.copyright {
+  color: #c2c2c2;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 2rem; }
+
+.section-articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.top-stories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto; }
+
+.text-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.search-form {
+  display: block;
+  width: 300px; }
+
+footer {
+  color: white;
+  margin-top: 200px; }
+
+a.entire-link {
+  display: block;
+  width: 100%;
+  height: 300px;
+  max-width: 600px;
+  position: relative;
+  background-size: cover;
+  background-position: center; }
+
+.text-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  bottom: 0; }
+
+@media only screen and (min-device-width: 600px) and (min-width: 600px) {
+  a.entire-link {
+    width: 50%;
+    height: 60vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .nyt-article {
+    width: 50%; }
+  .logo {
+    width: 67px;
+    height: 67px; } }
+
+@media only screen and (min-device-width: 1000px) and (min-width: 1000px) {
+  a.entire-link {
+    width: 25%;
+    height: 65vh; } }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -44,139 +211,3 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-logo {
-  height: 50%;
-  max-width: 50%; }
-
-.screen-reader {
-  margin: -1px;
-  overflow: hidden;
-  border: 0;
-  height: 1px; }
-
-body {
-  background: black;
-  color: #fff;
-  font-size: 16px;
-  font-family: Open Sans, sans-serif;
-  line-height: 1; }
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-logo {
-  height: 50%;
-  max-width: 50%;
-  margin-top: 200px; }
-
-search-form {
-  display: block;
-  width: 300px;
-  background-color: #f8f8f8; }
-
-p {
-  line-height: 20px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6); }
-
-.section-articles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
-
-.top-stories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
-footer {
-  color: white; }
-
-.text-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
-
-search-form {
-  display: block;
-  width: 300px; }
-
-@font-face {
-  font-family: OpenSans;
-  src: url(../assets/fonts/OpenSans-Bold.ttf);
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: OpenSans;
-  src: url(../assets/fonts/OpenSans-BoldItalic.ttf);
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: OpenSans;
-  src: url(../assets/fonts/OpenSans-Light.ttf);
-  font-weight: 300;
-  font-style: regular; }
-
-@font-face {
-  font-family: OpenSans;
-  src: url(../assests/fonts/OpenSans-LightItalic.ttf);
-  font-weight: 300;
-  font-style: italic; }
-
-footer {
-  color: white;
-  margin-top: 200px; }
-
-.entire-link {
-  width: 100%;
-  height: 300px;
-  max-width: 600px;
-  position: relative; }
-
-.text-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: absolute;
-  bottom: 0; }
-
-@media only screen and (min-device-width: 600px) and (min-width: 600px) {
-  .entire-link {
-    width: 50%;
-    height: 60vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .nyt-article {
-    width: 50%; } }
-
-@media only screen and (min-device-width: 1000px) and (min-width: 1000px) {
-  .entire-link {
-    width: 25%;
-    height: 65vh; } }

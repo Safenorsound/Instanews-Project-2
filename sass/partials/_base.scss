@@ -1,12 +1,17 @@
-@import 'partials/variables';
-@import 'partials/mixins';
-@import 'partials/base';
-@import 'reset';
+
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+a.entire-link {
+display: block;
+text-decoration: none;
+width: 100%;
+height: 300px;
+
 }
 .logo {
   height: 50%;
@@ -32,12 +37,13 @@ body {
 .header {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     z-index: 1;
     height: 85%;
     width: 100%;
     justify-content: center;
     align-items: center;
+
 } @media screen and (min-width: 600px) {
   flex-direction: row;
   padding-left: 40px;
@@ -47,19 +53,12 @@ body {
   padding-left: 0px;
    }
 
-#spinner {
+img.ajax-loader {
   width: 50px;
   height: 50px;
-  border: 5px solid skyblue;
-  border-radius: 50%;
-  border-top-color: transparent;
-  animation: spin 1s infinite;
-  
-}
-
-  @keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+  // position: absolute;
+  align-content: center;
+  align-items: center;
 }
 
 logo {
@@ -80,6 +79,14 @@ p {
   line-height: 20px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+div.copyright {
+  color: #c2c2c2;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .section-articles {
@@ -90,10 +97,6 @@ p {
     display: flex;
     flex-wrap: wrap;
     width: auto;
-}
-
-footer {
-  color: white;
 }
 
 .text-section {
@@ -112,11 +115,15 @@ footer {
 }
 
 // Background Image + Text
-.entire-link {
+a.entire-link {
+  display: block;
   width: 100%;
   height: 300px;
   max-width: 600px;
   position: relative;
+  // background-image: url('imageUrl');
+  background-size:cover; 
+  background-position:center;
 }
 
 .text-section {
@@ -133,7 +140,7 @@ footer {
 //       height: 60vh;
 
 @media only screen and (min-device-width: 600px) and (min-width: 600px) {
-  .entire-link {
+  a.entire-link {
     width: 50%;
     height: 60vh;
   flex-direction: row;
@@ -151,7 +158,7 @@ width: 50%;
 }
 
 @media only screen and (min-device-width: 1000px) and (min-width: 1000px) {
-  .entire-link {
+  a.entire-link {
     width: 25%;
     height: 65vh;
   }

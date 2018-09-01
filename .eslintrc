@@ -2,16 +2,16 @@
   "extends": "eslint:recommended",
   "rules": {
     
-    "no-alert": 1,
-    "camelcase": 1,
-    "curly": 1,
-    "eqeqeq": 1,
-    "no-console": 1,
-    "guard-for-in": 1,
-    "no-empty": 1,
-    "no-param-reassign": 1,
-    "no-unused-vars": 1,
-    "quotes": [ 1, "single"]
+    "no-alert": 0,
+    "camelcase": 0,
+    "curly": 0,
+    "eqeqeq": 0,
+    "no-console": 0,
+    "guard-for-in": 0,
+    "no-empty": 0,
+    "no-param-reassign": 0,
+    "no-unused-vars": 0,
+    "quotes": [ 0, "single"]
   },
   "globals": {
     "jQuery": false,

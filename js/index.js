@@ -1,25 +1,27 @@
 $(document).ready(function() {
-  $("#top-stories").on("change", function() {
-    // console.log("things changed");
-    $(".section-articles").empty();
-    // try adding the loading gif
-    $('.section-articles').append('<div id="spinner"></div>');
+  $('#top-stories').on('change', function() {
+    $('.section-articles').empty();
+
+    // $('.section-articles').append('<div id="spinner"></div>');
 
     // selected value from #top-stories
     var selectedStory = $(this).val();
 
     // create url for api call
     var url =
-      "https://api.nytimes.com/svc/topstories/v2/" + selectedStory + ".json";
-    url += "?" + $.param({ "api-key": "09f87bcede464e198631c56d291230bf" });
+      'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
+    url += '?' + $.param({ 'api-key': '09f87bcede464e198631c56d291230bf' });
 
     // ajax get request from user selection
     $.ajax({
       url: url,
-      method: "GET"
+      method: 'GET',
+      beforeSend: function() {
+        // try adding the loading gif
+        $('.ajax-loader').show();
+      }
     })
       .done(function(data) {
-
         var filteredArray = data.results.slice(0, 12);
 
         $.each(filteredArray, function(index, value) {
@@ -28,25 +30,20 @@ $(document).ready(function() {
           var storyUrl = value.url;
           var abstract = value.abstract;
 
-          var output = "<div class='entire-link' style='background: url(" + imageUrl + "); background-size:cover; background-position:center;'>" + "<a target='_blank' href='" + storyUrl + "'>";
-
-// Image not clickable yet. Maybe an issue with the placement of the <a href> I wasn't able to make the entire article clickable in an href without the code breaking. -JR
-
-          output += "<div class='text-section'>";
-          output += "<p>" + abstract + "</p>";
-          output += "</div>";
-          output += "</a>";
-          output += "</div>";
-          $(".section-articles").append(output);
+          var output =
+            "<a target='_blank' class='entire-link' href='" +
+            storyUrl +
+            "'style='background-image: url(" +
+            imageUrl +
+            ")'>";
+          output += '<p>' + abstract + '</p>';
+          output += '</a>';
+          $('.section-articles').append(output);
         });
       })
       .fail(function(err) {
         throw err;
       })
-      .always(function() {
-        // To remove the loading gif
-        $('#spinner').detach();
-       
-      }); // End of "Always" function
+      .always(function() {}); // End of "Always" function
   }); // End of top-stories function.
 }); // End of document-ready Jquery function.
