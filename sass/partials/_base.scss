@@ -25,7 +25,9 @@ a.entire-link {
 display: block;
 text-decoration: none;
 width: 100%;
-height: 300px;
+height: 420px;
+background-position: 50%;
+background-size: cover;
 }
 
 .logo {
@@ -75,6 +77,11 @@ section.container {
 
 } 
 
+.stories li {
+  position: relative;
+  // position: absolute;
+}
+
 .search-form-inner {
   display: inline-block;
   position: relative;
@@ -93,10 +100,10 @@ img.ajax-loader {
   display: none;
   width: 38px;
   height: 38px;
-  // position: absolute;
-  align-content: center;
-  align-items: center;
-  // transform: translate(-50%,-50%);
+  position: absolute;
+  // align-content: center;
+  // align-items: center;
+  transform: translate(-50%,-50%);
   top: 50%;
   left: 50%;
 }
@@ -117,7 +124,13 @@ form.search-form {
 .section-articles {
     display: flex;
     flex-flow: row wrap;
+    bottom: 0;
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    background: rgba(0,0,0,.6);    
 }
+
 .top-stories select{
     display: flex;
     flex-wrap: wrap;
@@ -135,8 +148,6 @@ div.copyright p {
   margin-top: 50px;
   text-align: center;  
   margin-bottom: 3rem;
-
-
 }
 
 @media screen and (min-width: 600px) {

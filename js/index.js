@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#top-stories').on('change', function() {
     $('.section-articles').empty();
     // try adding the loading gif
-    $('.ajax-loader').show();
+    $('.ajax-loader.gif').show();
 
     // selected value from #top-stories
     var selectedStory = $(this).val();
@@ -36,11 +36,18 @@ $(document).ready(function() {
           output += '<p>' + abstract + '</p>';
           output += '</a>';
           $('.section-articles').append(output);
+          $('.ajax-loader.gif').hide();
         });
       })
       .fail(function(err) {
         throw err;
       })
-      .always(function() {}); // End of "Always" function
+      .always(function() {
+        setTimeout(function() {
+          $('.ajax-loader.gif').hide();
+        }, 2000);
+      });
+
+    // End of "Always" function
   }); // End of top-stories function.
 }); // End of document-ready Jquery function.
