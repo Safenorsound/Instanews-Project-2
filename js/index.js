@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $('#top-stories').on('change', function() {
     $('.section-articles').empty();
-
-    // $('.section-articles').append('<div id="spinner"></div>');
+    // try adding the loading gif
+    $('.ajax-loader').show();
 
     // selected value from #top-stories
     var selectedStory = $(this).val();
@@ -16,10 +16,7 @@ $(document).ready(function() {
     $.ajax({
       url: url,
       method: 'GET',
-      beforeSend: function() {
-        // try adding the loading gif
-        $('.ajax-loader').show();
-      }
+      beforeSend: function() {}
     })
       .done(function(data) {
         var filteredArray = data.results.slice(0, 12);

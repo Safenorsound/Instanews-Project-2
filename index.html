@@ -13,68 +13,63 @@
 
 <body>
 
-    <!-- Created for a potential Animation -->
-    <!-- <div id+"loadingAnimation">  
-    </div> -->
+    <section class=" container">
+        <header class="site-header">
+            <div class="logo">
+                <h1 class="screen-reader">Instanews - New York Times News Reader</h1>
+                <img src="assets/images/nyt-logo.svg" alt="White New York Times logo;">
+            </div>
 
-    <div class="header container">
-        <div class="logo">
-            <h1 class="screen-reader">Instanews - New York Times News Reader</h1>
-            <img src="assets/images/nyt-logo.svg" alt="White New York Times logo;">
+            <form class="search-form" action="#" method="post">
 
-        </div>
-        <div class="search-form" action="#" method="post"></div>
+                <div class="search-form-inner">
+                    <p> Choose a section: </p>
+                    <select name="sections" id="top-stories">
+                        <option value="sections">Sections...</option>
+                        <option value="arts">Art</option>
+                        <option value="automobiles">Automobiles</option>
+                        <option value="books">Books</option>
+                        <option value="business">Business</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="food">Food</option>
+                        <option value="home">Home</option>
+                        <option value="insider">Insider</option>
+                        <option value="health">Health</option>
+                        <option value="magazine">Magazine</option>
+                        <option value="movies">Movies</option>
+                        <option value="national">National</option>
+                        <option value="nyregion">NY Region</option>
+                        <option value="obituaries">Obituaries</option>
+                        <option value="opinion">Opinion</option>
+                        <option value="politics">Politics</option>
+                        <option value="realestate">Real Estate</option>
+                        <option value="science">Science</option>
+                        <option value="sports">Sports</option>
+                        <option value="sundayreview">Sunday Review</option>
+                        <option value="technology">Technology</option>
+                        <option value="theater">Theater</option>
+                        <option value="tmagazine">T Magazine</option>
+                        <option value="travel">Travel</option>
+                        <option value="upshot">Upshot</option>
+                        <option value="world">World</option>
+                    </select>
+                </div>
+            </form>
+        </header>
 
-        <form class="search-form" action="#" method="post"></form>
+        <section class="section-articles">
+            <div class="stories"></div>
+            <img src="./assets/images/ajax-loader.gif" alt="Loading..." class="ajax-loader" />
+        </section>
 
-        <div class="search-form-inner"></div>
-        <p> Choose a section: </p>
-        <select id="top-stories">
-            <option value="sections">Sections...</option>
-            <option value="arts">Art</option>
-            <option value="automobiles">Automobiles</option>
-            <option value="books">Books</option>
-            <option value="business">Business</option>
-            <option value="fashion">Fashion</option>
-            <option value="food">Food</option>
-            <option value="home">Home</option>
-            <option value="insider">Insider</option>
-            <option value="health">Health</option>
-            <option value="magazine">Magazine</option>
-            <option value="movies">Movies</option>
-            <option value="national">National</option>
-            <option value="nyregion">NY Region</option>
-            <option value="obituaries">Obituaries</option>
-            <option value="opinion">Opinion</option>
-            <option value="politics">Politics</option>
-            <option value="realestate">Real Estate</option>
-            <option value="science">Science</option>
-            <option value="sports">Sports</option>
-            <option value="sundayreview">Sunday Review</option>
-            <option value="technology">Technology</option>
-            <option value="theater">Theater</option>
-            <option value="tmagazine">T Magazine</option>
-            <option value="travel">Travel</option>
-            <option value="upshot">Upshot</option>
-            <option value="world">World</option>
-        </select>
-    </div>
-    </form>
-    </header>
-
-    <section class="section-articles">
-        <div class="stories"></div>
-        <img src="./assets/images/ajax-loader.gif" alt="Loading..." class="ajax-loader" />
+        <footer class="site-footer">
+            <div class="copyright">
+                <p> © Copyright 2018
+                    <span>INSTANEWS</span>
+                </p>
+            </div>
+        </footer>
     </section>
-
-    <footer class="site-footer">
-        <div class="copyright">
-            <p> © Copyright 2018
-                <span>INSTANEWS</span>
-            </p>
-        </div>
-    </footer>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./build/js/index.min.js"></script>
