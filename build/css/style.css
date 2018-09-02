@@ -82,7 +82,8 @@ section.container {
   position: relative;
   text-align: center;
   margin-bottom: 1rem;
-  width: 100%; }
+  width: 100%;
+  padding-top: 15px; }
 
 .logo, .search-form {
   display: block;
