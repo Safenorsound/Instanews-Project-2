@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#top-stories').on('change', function() {
     $('.section-articles').empty();
     // try adding the loading gif
-    $('.ajax-loader.gif').show();
+    $('.ajax-loader.gif').hide();
 
     // selected value from #top-stories
     var selectedStory = $(this).val();
@@ -43,8 +43,9 @@ $(document).ready(function() {
         throw err;
       })
       .always(function() {
+        // Slide 17
         setTimeout(function() {
-          $('.ajax-loader.gif').hide();
+          $('.ajax-loader.gif').show();
         }, 2000);
       });
 

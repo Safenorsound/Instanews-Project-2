@@ -1,5 +1,3 @@
-
-
 *,
 *:before,
 *:after {
@@ -18,22 +16,22 @@ p {
 
 img {
   height: auto;
-    max-width: 100%;
+  max-width: 100%;
 }
 
 a.entire-link {
-display: block;
-text-decoration: none;
-width: 100%;
-height: 420px;
-background-position: 50%;
-background-size: cover;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 420px;
+  background-position: 50%;
+  background-size: cover;
 }
 
 .logo {
   height: 50%;
   max-width: 50%;
-  transition: all .5s ease-out .5s;
+  transition: all 0.5s ease-out 0.5s;
 }
 
 header.site-header {
@@ -46,12 +44,12 @@ header.site-header {
   padding: 2rem;
 }
 
-// Screen Reader styled to hide the h1 text. 
+// Screen Reader styled to hide the h1 text.
 .screen-reader {
-    margin: -1px;
-    overflow: hidden;
-    border: 0;
-    height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  height: 1px;
 }
 body {
   background: black;
@@ -64,22 +62,16 @@ body {
 
 // div.container in the demo
 section.container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-    // justify-content: space-between;
-    margin: 0 auto;
-    justify-content: space-between;
-    // align-items: center;
-    max-width: 1600px;
-    width: 100%;
-
-} 
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 1600px;
+  width: 100%;
+}
 
 .stories li {
   position: relative;
-  // position: absolute;
 }
 
 .search-form-inner {
@@ -91,106 +83,107 @@ section.container {
   padding-top: 15px;
 }
 
-.logo, .search-form {
+.logo,
+.search-form {
   display: block;
   width: 300px;
 }
 
 img.ajax-loader {
-  display: none;
-  width: 38px;
-  height: 38px;
+  // display: none;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  // align-content: center;
-  // align-items: center;
-  transform: translate(-50%,-50%);
+  align-content: center;
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
 }
 
 logo {
   height: auto;
- width: 150px;
+  width: 150px;
 }
 
 form.search-form {
   display: flex;
   justify-content: center;
-  // display: block;
   width: 300px;
-  // background-color:rgb(248,248,248);
 }
 
 .section-articles {
-    display: flex;
-    flex-flow: row wrap;
-    bottom: 0;
-    width: 100%;
-    padding: .5rem;
-    font-size: 1rem;
-    background: rgba(0,0,0,.6);    
+  display: flex;
+  flex-flow: row wrap;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.top-stories select{
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
-    font-size: 1.1rem;
+select {
+  background-color: rgb(248, 248, 248);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(166, 166, 166);
+  border-image: initial;
+  border-radius: 5px;
 }
 
-// .text-section {
-//   display: flex;
-//   align-items: flex-end;
-// }
+.top-stories select {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  font-size: 1.1rem;
+}
 
 div.copyright p {
-  color:#c2c2c2;
+  color: #c2c2c2;
   margin-top: 50px;
-  text-align: center;  
+  text-align: center;
   margin-bottom: 3rem;
+  padding: 0 2rem;
 }
 
 @media screen and (min-width: 600px) {
-
   a.entire-link {
     width: 50%;
     height: 60vh;
-  flex-direction: row;
-}
+    flex-direction: row;
+  }
 
-.nyt-article {
-width: 50%;
-
-}
+  .nyt-article {
+    width: 50%;
+  }
 
   header.site-header {
     align-items: center;
     width: 100%;
-}
+  }
 
-  .logo, .search-form {
+  .logo,
+  .search-form {
     max-width: 250px;
-}
+  }
 
   div.logo {
     flex: 0 1 25%;
     margin: 0 1rem 0 0;
     text-align: left;
-}
+  }
 
-form.search-form {
-  // -ms-flex: 0 1 75%;
-  flex: 0 1 75%;
-}
+  form.search-form {
+    flex: 0 1 75%;
+  }
 
-.logo, .search-form {
-  max-width: 250px;
-}
+  .logo,
+  .search-form {
+    max-width: 250px;
+  }
 
-.search-form-inner {
-  text-align: left;
-}
-
+  .search-form-inner {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-device-width: 1000px) and (min-width: 1000px) {
@@ -198,4 +191,12 @@ form.search-form {
     width: 25%;
     height: 65vh;
   }
+
+  header.site-header {
+    justify-content: flex-start;
+  }
+
+  div.copyright p {
+    text-align: left;
+}
 }

@@ -28,8 +28,8 @@ a.entire-link {
 .logo {
   height: 50%;
   max-width: 50%;
-  -webkit-transition: all .5s ease-out .5s;
-  transition: all .5s ease-out .5s; }
+  -webkit-transition: all 0.5s ease-out 0.5s;
+  transition: all 0.5s ease-out 0.5s; }
 
 header.site-header {
   display: -webkit-box;
@@ -70,8 +70,6 @@ section.container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -90,15 +88,17 @@ section.container {
   width: 100%;
   padding-top: 15px; }
 
-.logo, .search-form {
+.logo,
+.search-form {
   display: block;
   width: 300px; }
 
 img.ajax-loader {
-  display: none;
-  width: 38px;
-  height: 38px;
+  width: 50px;
+  height: 50px;
   position: absolute;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
@@ -127,9 +127,18 @@ form.search-form {
           flex-flow: row wrap;
   bottom: 0;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1rem;
   background: rgba(0, 0, 0, 0.6); }
+
+select {
+  background-color: #f8f8f8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a6a6a6;
+  -o-border-image: initial;
+     border-image: initial;
+  border-radius: 5px; }
 
 .top-stories select {
   display: -webkit-box;
@@ -144,7 +153,8 @@ div.copyright p {
   color: #c2c2c2;
   margin-top: 50px;
   text-align: center;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  padding: 0 2rem; }
 
 @media screen and (min-width: 600px) {
   a.entire-link {
@@ -161,7 +171,8 @@ div.copyright p {
         -ms-flex-align: center;
             align-items: center;
     width: 100%; }
-  .logo, .search-form {
+  .logo,
+  .search-form {
     max-width: 250px; }
   div.logo {
     -webkit-box-flex: 0;
@@ -173,7 +184,8 @@ div.copyright p {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 75%;
             flex: 0 1 75%; }
-  .logo, .search-form {
+  .logo,
+  .search-form {
     max-width: 250px; }
   .search-form-inner {
     text-align: left; } }
@@ -181,7 +193,13 @@ div.copyright p {
 @media only screen and (min-device-width: 1000px) and (min-width: 1000px) {
   a.entire-link {
     width: 25%;
-    height: 65vh; } }
+    height: 65vh; }
+  header.site-header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  div.copyright p {
+    text-align: left; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
