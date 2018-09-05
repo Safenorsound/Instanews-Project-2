@@ -5,6 +5,16 @@
   outline: none;
 }
 
+body, button, input {
+  // font-size: 10px;
+  font-size: 1rem;
+}
+
+.ajax-loader {
+  display: none;
+  z-index: 99;
+}
+
 p {
   line-height: 1.5rem;
   color: #fff;
@@ -44,7 +54,6 @@ header.site-header {
   padding: 2rem;
 }
 
-// Screen Reader styled to hide the h1 text.
 .screen-reader {
   margin: -1px;
   overflow: hidden;
@@ -60,7 +69,6 @@ body {
   display: block;
 }
 
-// div.container in the demo
 section.container {
   display: flex;
   flex-direction: column;
@@ -184,6 +192,12 @@ div.copyright p {
   .search-form-inner {
     text-align: left;
   }
+
+  header.site-header {
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
 }
 
 @media only screen and (min-device-width: 1000px) and (min-width: 1000px) {

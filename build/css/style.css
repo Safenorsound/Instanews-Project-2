@@ -5,6 +5,13 @@
           box-sizing: border-box;
   outline: none; }
 
+body, button, input {
+  font-size: 1rem; }
+
+.ajax-loader {
+  display: none;
+  z-index: 99; }
+
 p {
   line-height: 1.5rem;
   color: #fff;
@@ -188,7 +195,12 @@ div.copyright p {
   .search-form {
     max-width: 250px; }
   .search-form-inner {
-    text-align: left; } }
+    text-align: left; }
+  header.site-header {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+            align-items: center;
+    width: 100%; } }
 
 @media only screen and (min-device-width: 1000px) and (min-width: 1000px) {
   a.entire-link {

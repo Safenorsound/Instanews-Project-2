@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#top-stories').on('change', function() {
     $('.section-articles').empty();
     // try adding the loading gif
-    $('.ajax-loader.gif').hide();
+    $('.ajax-loader').show();
 
     // selected value from #top-stories
     var selectedStory = $(this).val();
@@ -15,8 +15,8 @@ $(document).ready(function() {
     // ajax get request from user selection
     $.ajax({
       url: url,
-      method: 'GET',
-      beforeSend: function() {}
+      method: 'GET'
+      // beforeSend: function() {}
     })
       .done(function(data) {
         var filteredArray = data.results.slice(0, 12);
@@ -36,7 +36,6 @@ $(document).ready(function() {
           output += '<p>' + abstract + '</p>';
           output += '</a>';
           $('.section-articles').append(output);
-          $('.ajax-loader.gif').hide();
         });
       })
       .fail(function(err) {
@@ -45,8 +44,8 @@ $(document).ready(function() {
       .always(function() {
         // Slide 17
         setTimeout(function() {
-          $('.ajax-loader.gif').show();
-        }, 2000);
+          $('.ajax-loader').hide();
+        }, 1000);
       });
 
     // End of "Always" function
