@@ -163,6 +163,10 @@ div.copyright p {
   margin-bottom: 3rem;
   padding: 0 2rem; }
 
+.logo-shift {
+  height: auto;
+  width: 67px; }
+
 @media screen and (min-width: 600px) {
   a.entire-link {
     width: 50%;

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('#top-stories').on('change', function() {
     $('.section-articles').empty();
+    $('div.logo').addClass('logo-shift');
     // try adding the loading gif
     $('.ajax-loader').show();
 
