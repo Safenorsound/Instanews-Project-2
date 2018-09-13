@@ -13,6 +13,7 @@ body, button, input {
 .ajax-loader {
   display: none;
   z-index: 99;
+  position: absolute;
 }
 
 p.choose-section {
@@ -22,8 +23,6 @@ p.choose-section {
 p {
   line-height: 1.5rem;
   color: #fff;
-  background: rgba(0,0,0,.6);
-
   // margin: 0;
   // padding: 0;
   // border: 0;
@@ -67,21 +66,29 @@ a.entire-link {
   width: 100%;
 }
 
-.logo {
-  height: 50%;
-  max-width: 50%;
-  transition: all 0.5s ease-out 0.5s;
-}
+// div#logo {
+//   height: 50%;
+//   max-width: 50%;
+//   max-height: 600px;
+// }
 
 header.site-header {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  height: auto;
   align-items: center;
   align-content: center;
   justify-content: center;
   padding: 2rem;
+  position: relative;
 }
+
+// .header-toggle {
+//   .logo {
+//     height: auto;
+//     width: 67px;
+//   }
+// }
 
 .screen-reader {
   margin: -1px;
@@ -125,24 +132,25 @@ section.container {
 .search-form {
   display: block;
   width: 300px;
+  height: auto;
+  max-height: 600px;
 }
-
 
 
 img.ajax-loader {
   // display: none;
   width: 50px;
   height: 50px;
-  position: absolute;
   align-content: center;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
 }
 
-logo {
+.logo {
   height: auto;
   width: 150px;
+  max-height: 600px;
 }
 
 .search-form-inner {
@@ -174,6 +182,13 @@ select {
   border-color: rgb(166, 166, 166);
   border-image: initial;
   border-radius: 5px;
+  color: black;
+  cursor: default;
+  -webkit-appearance: menulist;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
 }
 
 .top-stories select {
@@ -181,6 +196,7 @@ select {
   flex-wrap: wrap;
   width: auto;
   font-size: 1.1rem;
+  // position: relative;
 }
 
 div.copyright p {
@@ -210,17 +226,24 @@ div.copyright p {
   header.site-header {
     align-items: center;
     width: 100%;
-  }
+    align-items: flex-start;
+    flex: 1 0 auto;
+    height: auto;
+}
+  
 
   .logo,
   .search-form {
     max-width: 250px;
+    height: auto;
   }
 
-  div.logo {
+  .logo {
     flex: 0 1 25%;
     margin: 0 1rem 0 0;
     text-align: left;
+    height: auto;
+    // position: absolute;
   }
 
   form.search-form {
@@ -234,6 +257,7 @@ div.copyright p {
 
   .search-form-inner {
     text-align: left;
+    // left: 15rem;
   }
 
   header.site-header {
