@@ -3,30 +3,32 @@ $(document).ready(function() {
     $('.ajax-loader').show();
     event.preventDefault();
 
-    $('#div#logo').animate({ height: '67px;' }, 1000, function() {
-      $(this).css('height', 'auto');
-      console.log(this);
-    });
+    $('div#logo').addClass('header-toggle');
 
-    $('div#logo,.img').animate(
-      {
-        width: '67px;',
-        height: '67px'
-      },
-      800, // after 8 milliseconds run function
-      function() {
-        $('.box').animate(
-          {
-            width: '6rem',
-            height: '6rem'
-          }
-          // 3000, // after 3 seconds run another function
-          // function() {
-          //   alert('animations complete');
-          // }
-        );
-      }
-    );
+    // $('#div#logo').animate({ height: '67px;' }, 1000, function() {
+    //   $(this).css('height', 'auto');
+    //   console.log(this);
+    // });
+
+    // $('div#logo,.img').animate(
+    //   {
+    //     width: '67px;',
+    //     height: '67px'
+    //   },
+    //   800, // after 8 milliseconds run function
+    //   function() {
+    //     $('.box').animate(
+    //       {
+    //         width: '6rem',
+    //         height: '6rem'
+    //       }
+    //       // 3000, // after 3 seconds run another function
+    //       // function() {
+    //       //   alert('animations complete');
+    //       // }
+    //     );
+    //   }
+    // );
 
     $('.section-articles').empty();
 

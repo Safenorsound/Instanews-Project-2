@@ -67,6 +67,11 @@ header.site-header {
   padding: 2rem;
   position: relative; }
 
+.header-toggle {
+  height: 67px;
+  width: 67px;
+  margin-right: 50px; }
+
 .screen-reader {
   margin: -1px;
   overflow: hidden;

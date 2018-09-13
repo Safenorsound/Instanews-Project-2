@@ -83,12 +83,11 @@ header.site-header {
   position: relative;
 }
 
-// .header-toggle {
-//   .logo {
-//     height: auto;
-//     width: 67px;
-//   }
-// }
+.header-toggle {
+    height: 67px;
+    width: 67px;
+    margin-right: 50px;
+  }
 
 .screen-reader {
   margin: -1px;
