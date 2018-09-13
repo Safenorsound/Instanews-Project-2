@@ -34,7 +34,8 @@ $(document).ready(function() {
             "'style='background-image: url(" +
             imageUrl +
             ")'>";
-          output += '<p>' + abstract + '</p>';
+          output +=
+            '<div class="story-meta"><p>' + abstract + '</p>' + '</div>';
           output += '</a>';
           $('.section-articles').append(output);
         });
