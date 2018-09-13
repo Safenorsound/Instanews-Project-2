@@ -38,6 +38,9 @@ $(document).ready(function() {
           output += '</a>';
           $('.section-articles').append(output);
         });
+        setTimeout(function() {
+          $('.ajax-loader').hide();
+        }, 1000);
       })
       .fail(function(err) {
         throw err;
