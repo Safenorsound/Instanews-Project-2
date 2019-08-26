@@ -61,4 +61,6 @@ $(document).ready(function() {
 
     // End of "Always" function
   }); // End of top-stories function.
-}); // End of document-ready Jquery function.
+});
+
+// End of document-ready Jquery function
