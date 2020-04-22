@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $('#top-stories').on('change', function() {
+$(document).ready(function () {
+  $('#top-stories').on('change', function () {
     $('.ajax-loader').show();
     event.preventDefault();
 
@@ -13,22 +13,22 @@ $(document).ready(function() {
     // create url for api call
     var url =
       'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
-    url += '?' + $.param({ 'api-key': '09f87bcede464e198631c56d291230bf' });
+    url += '?' + $.param({ 'api-key': '2OOGyMbhP68zbPzw5hB76eGkw1LMxGqA' });
 
     // ajax get request from user selection
     $.ajax({
       url: url,
-      method: 'GET'
+      method: 'GET',
     })
-      .done(function(data) {
+      .done(function (data) {
         // var filteredArray = data.results.slice(0, 12);
         var filteredArray = data.results
-          .filter(function(item) {
+          .filter(function (item) {
             return item.multimedia.length;
           })
           .slice(0, 12);
 
-        $.each(filteredArray, function(index, value) {
+        $.each(filteredArray, function (index, value) {
           //   console.log(value);
           var imageUrl = value.multimedia[4].url;
           var storyUrl = value.url;
@@ -45,16 +45,16 @@ $(document).ready(function() {
           output += '</a>';
           $('.section-articles').append(output);
         });
-        setTimeout(function() {
+        setTimeout(function () {
           $('.ajax-loader').hide();
         }, 1000);
       })
-      .fail(function(err) {
+      .fail(function (err) {
         throw err;
       })
-      .always(function() {
+      .always(function () {
         // Slide 17
-        setTimeout(function() {
+        setTimeout(function () {
           $('.ajax-loader').hide();
         }, 1000);
       });
