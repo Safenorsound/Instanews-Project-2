@@ -8,12 +8,24 @@ $(document).ready(function () {
     $('.section-articles').empty();
 
     // selected value from #top-stories
-    var selectedStory = $(this).val();
+    var articlesearch = $(this).val();
 
     // create url for api call
     var url =
-      'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
+      'https://api.nytimes.com/svc/topstories/v2/' + articlesearch + '.json';
     url += '?' + $.param({ 'api-key': '2OOGyMbhP68zbPzw5hB76eGkw1LMxGqA' });
+
+    // selected value from #top-stories
+    // OLD:::::
+    //var selectedStory = $(this).val();
+
+    // // create url for api call
+    // var url =
+    //   'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
+    // url += '?' + $.param({ 'api-key': '2OOGyMbhP68zbPzw5hB76eGkw1LMxGqA' });
+
+    //New
+    //https://api.nytimes.com/svc/search/v2/articlesearch.json
 
     // ajax get request from user selection
     $.ajax({
