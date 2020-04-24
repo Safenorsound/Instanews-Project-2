@@ -13,11 +13,9 @@ $(document).ready(function () {
     // create url for api call
     var url =
       'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
-    url += '?' + $.param({ 'api-key': 'QGkPVer6mjBo1FUk' });
+    url += '?' + $.param({ 'api-key': '2aTZRizE8iYuvPDWWtDTr8GdsxmtDDsM' });
 
-    // Old:   2OOGyMbhP68zbPzw5hB76eGkw1LMxGqA
-
-    // ajax get request from user selection
+    // // ajax get request from user selection
     $.ajax({
       url: url,
       method: 'GET',
